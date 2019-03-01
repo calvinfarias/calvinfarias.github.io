@@ -2,17 +2,18 @@
 <head>
     <script src="./ping.js"></script>
     <script>
-    var do_ping = function() {
-        ping(document.getElementById('pingurl').value).then(function(delta) {
-            alert('The url you requested is online');
+    var check_on_lief = function() {
+        ping('lief.if.ufrgs.br').then(function(delta) {
+            return 'Lief is online';
         }).catch(function(error) {
-            alert(String(error));
+            return "Couldn't ping lief.if.ufrgs.br";
         });
     };
     </script>
 </head>
 <!--META http-equiv="refresh" content="5; URL=http://lief.if.ufrgs.br/~calvinfarias"-->
 <body>
+    <p> check_on_lief() </p>
         <!--
         <p>You are being redirected to my personal page, please click <a href="http://lief.if.ufrgs.br/~calvinfarias">here</a> if your browser does not redirect you.</p>
         //<input id='pingurl' type='text' value='lief.if.ufrgs.br' readonly</input>
