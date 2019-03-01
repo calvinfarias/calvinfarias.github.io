@@ -4,9 +4,10 @@
     <script>
     var check_on_lief = function() {
         ping('lief.if.ufrgs.br').then(function(delta) {
-            document.getElementById('status').innerHTML = "Lief is online"
-        }));
-        return message;
+            document.getElementById('status').innerHTML = "Lief is online";
+        }).catch(function(error) {
+            document.getElementById('status').innerHTML = "Lief is offline";
+        });
     };
     </script>
 </head>
