@@ -2,7 +2,7 @@
 <head>
     <script src="./ping.js"></script>
     <script>
-    var ping = function() {
+    var do_ping = function() {
         ping(document.getElementById('pingurl').value).then(function(delta) {
             alert('Lief is online');
         }).catch(function(error) {
@@ -17,7 +17,7 @@
         <p>You are being redirected to my personal page, please click <a href="http://lief.if.ufrgs.br/~calvinfarias">here</a> if your browser does not redirect you.</p>
         -->
         <input type='text' value='lief.if.ufrgs.br' readonly></input>
-        <button onclick='ping()'>Verify</button>
+        <button onclick='do_ping()'>Verify</button>
 </body>
 </html>
 
