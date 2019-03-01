@@ -3,7 +3,7 @@
     <script src="./ping.js"></script>
     <script>
     var check_on_lief = function() {
-        ping('lief.if.ufrgs.br').then(function(delta) {
+        ping('lief.iaf.ufrgs.br').then(function(delta) {
             document.getElementById('status').innerHTML = "Lief is online";
         }).catch(function(error) {
             document.getElementById('status').innerHTML = "Lief is offline";
@@ -13,7 +13,7 @@
 </head>
 <!--META http-equiv="refresh" content="5; URL=http://lief.if.ufrgs.br/~calvinfarias"-->
 <body>
-    <p id='status'>status of lief.if.ufgrs.br is unknow.</p>
+    <p id='status'>Status of lief.if.ufgrs.br is unknow.</p>
     <button onclick='check_on_lief()'>Check</button>
         <!--
         <p>You are being redirected to my personal page, please click <a href="http://lief.if.ufrgs.br/~calvinfarias">here</a> if your browser does not redirect you.</p>
