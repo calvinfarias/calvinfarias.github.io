@@ -2,7 +2,7 @@
 <head>
     <script src="./ping.js"></script>
     <script>
-    var do_ping = function() {
+    var ping = function() {
         ping(document.getElementById('pingurl').value).then(function(delta) {
             alert(delta);
         }).catch(function(error) {
@@ -16,8 +16,8 @@
         <!--
         <p>You are being redirected to my personal page, please click <a href="http://lief.if.ufrgs.br/~calvinfarias">here</a> if your browser does not redirect you.</p>
         -->
-        <input id='pingurl' type='text' value='http://google.com'></input>
-<button onclick='do_ping()'>Ping</button>
+        <input type='text' value='lief.if.ufrgs.br' readonly></input>
+        <button onclick='ping()'>Verify</button>
 </body>
 </html>
 
