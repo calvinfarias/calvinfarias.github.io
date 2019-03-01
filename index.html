@@ -3,11 +3,11 @@
     <script src="./ping.js"></script>
     <script>
     var check_on_lief = function() {
+        var message = "Couldn't ping lief.if.ufrgs.br";
         ping('lief.if.ufrgs.br').then(function(delta) {
-            return 'Lief is online';
-        }).catch(function(error) {
-            return "Couldn't ping lief.if.ufrgs.br";
-        });
+            message = 'Lief is online';
+        }));
+        return message;
     };
     </script>
 </head>
