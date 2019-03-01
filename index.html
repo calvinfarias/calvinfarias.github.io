@@ -3,9 +3,8 @@
     <script src="./ping.js"></script>
     <script>
     var check_on_lief = function() {
-        var message = "Couldn't ping lief.if.ufrgs.br";
         ping('lief.if.ufrgs.br').then(function(delta) {
-            message = 'Lief is online';
+            document.getElementById('status').innerHTML = "Lief is online"
         }));
         return message;
     };
@@ -13,7 +12,8 @@
 </head>
 <!--META http-equiv="refresh" content="5; URL=http://lief.if.ufrgs.br/~calvinfarias"-->
 <body>
-    <p> check_on_lief() </p>
+    <p id='status'>status of lief.if.ufgrs.br is unknow.</p>
+    <button onclick='check_on_lief()'>Check</button>
         <!--
         <p>You are being redirected to my personal page, please click <a href="http://lief.if.ufrgs.br/~calvinfarias">here</a> if your browser does not redirect you.</p>
         //<input id='pingurl' type='text' value='lief.if.ufrgs.br' readonly</input>
